@@ -1,0 +1,57 @@
+<html>
+    <head>
+        
+        <title>User_registration</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js'></script>
+    </head>
+    <body>
+        <div class="col-md-8" style="margin-left:225px;margin-top: 125px ">
+        <h1 align="center" style="color: midnightblue">Registration</h1>
+        <h4 align="center"><p><span style="color: red">{{error}}{{usererror}}{{passerror}}</span></p></h4>
+        <form method="POST" action="/account/registration/">
+            {% csrf_token %}
+            <table align="center" class="table table-hover">
+                <tr>
+                    <th>First Name</th>
+                    <td>:</td>
+                    <td><input type="text" class="form-control" name="fname" placeholder="Enter your first name"></td>
+                </tr>
+                <tr>
+                    <th>Last Name</th>
+                    <td>:</td>
+                    <td><input type="text" class="form-control" name="lname" placeholder="Enter your last name"></td>
+                </tr>
+                <tr>
+                    <th>Email </th>
+                    <td>:</td>
+                    <td><input type="email" name="email" placeholder="Enter email" class="form-control"></td>
+                </tr>
+                <tr>
+                    <th>Username</th>
+                    <td>:</td>
+                    <td><input type="text" name="username" placeholder="Enter username" class="form-control"></td>
+                </tr>
+                <tr>
+                    <th>Password</th>
+                    <td>:</td>
+                    <td><input type="password" name="password" placeholder="Enter password" class="form-control"></td>
+                </tr>
+                <tr>
+                    <th>Retype-password</th>
+                    <td>:</td>
+                    <td><input type="password" name="rpassword" placeholder="Retype password" class="form-control"></td>
+                </tr>
+                <tr>
+                    
+                    <td colspan="3" align="center"><input class="btn btn-primary" type="submit"  value="Submit"></td>
+                </tr>
+
+            </table>
+
+        </form>
+    </div>
+    </body>
+</html>
